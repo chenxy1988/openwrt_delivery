@@ -1,0 +1,5 @@
+config can
+	option interface	can0
+	option bitrate 	250000
+	option enable	1
+	option loopback	1

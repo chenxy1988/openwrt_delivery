@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+	sysagent -b
+	sysagent -s
+	echo 1000 > /sys/class/net/sfp0/mtu
+}
+
+stop() {
+	echo "System agent terminate ... ">/dev/ttyPS0
+}

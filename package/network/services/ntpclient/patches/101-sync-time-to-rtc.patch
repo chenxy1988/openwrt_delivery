@@ -1,0 +1,18 @@
+--- a/ntpclient.c
++++ b/ntpclient.c
+@@ -183,6 +183,7 @@
+ 	if (debug) {
+ 		printf("set time to %lu.%.9lu\n", tv_set.tv_sec, tv_set.tv_nsec);
+ 	}
++	system("sysagent -t");
+ #else
+ 	/* Traditional Linux way to set the system clock
+ 	 */
+@@ -198,6 +199,7 @@
+ 	if (debug) {
+ 		printf("set time to %lu.%.6lu\n", tv_set.tv_sec, tv_set.tv_usec);
+ 	}
++	system("sysagent -t");
+ #endif
+ }
+ 

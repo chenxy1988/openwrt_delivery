@@ -1,0 +1,10 @@
+--- a/coreutils/date.c
++++ b/coreutils/date.c
+@@ -421,5 +421,7 @@
+ 	}
+ 	puts(date_buf);
+ 
++	system("sysagent -t");
++
+ 	return EXIT_SUCCESS;
+ }
