@@ -1,0 +1,19 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+	echo "Update ethernet 0 MAC address"
+	ifconfig eth0 down
+	ifconfig eth0 hw ether  `uci get macaddr.eth0.macaddr`
+	ifconfig eth0 up
+
+	echo "Update SFP 0 MAC address"
+	ifconfig sfp0 down
+	ifconfig sfp0 hw ether `uci get macaddr.sfp0.macaddr`
+	ifconfig sfp0 up
+}
+
+stop() {
+	echo "HWADDR exit ..... "
+}
