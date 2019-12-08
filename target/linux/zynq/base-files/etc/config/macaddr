@@ -1,0 +1,6 @@
+config interface 'eth0'
+	option macaddr '00:11:22:33:44:55'
+
+config interface 'sfp0'
+	option macaddr '00:ff:01:55:11:22'
+
