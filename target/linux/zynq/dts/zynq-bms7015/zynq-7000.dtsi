@@ -262,9 +262,13 @@
 					compatible = "fixed-partitions";
 					#address-cells = <1>;
 					#size-cells = <1>;
-					partition@0x1000000 {
+					partition@0xf00000 {
 						label = "rootfs_data";
-						reg = <0x0000000 0x1000000>;
+						reg = <0x0000000 0xf00000>;
+					};
+					partition@0x1000000 {
+						label = "NVRAM";
+						reg = <0xf00000 0x1000000>;
 					};
 				};
 			};
