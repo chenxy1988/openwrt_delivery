@@ -1,0 +1,41 @@
+Source-Makefile: feeds/packages/libs/librsocket-cpp/Makefile
+
+Package: librsocket-cpp
+Version: 2019-05-08-ddc80392b17a3fadcbea09f82ea5f6936f0fd459-1
+Depends: +libc +GCC_LIBSSP:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libfolly +gflags +glog +libopenssl +libyarpl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: C++ implementation of RSocket
+Maintainer: 
+Source: librsocket-cpp-.tar.gz
+License: Apache-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	C++ implementation of RSocket, and Application protocol providing Reactive Streams semantics
+
+@@
+
+Package: libyarpl
+Version: 2019-05-08-ddc80392b17a3fadcbea09f82ea5f6936f0fd459-1
+Depends: +libc +GCC_LIBSSP:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libfolly +gflags +glog +libatomic
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: yarpl: Yet Another Reactive Programming Library
+Maintainer: 
+Source: librsocket-cpp-.tar.gz
+License: Apache-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	C++ implementation of reactive functional programming including both Observable and Flowable types.
+
+@@
+
+

@@ -320,6 +320,8 @@ export ARGV="$IMAGE"
 export ARGC=1
 
 sysagent -u $IMAGE
+sync
+reboot
 exit 1
 
 for check in $sysupgrade_image_check; do

@@ -29,12 +29,10 @@ define Build/zynq-pmu-sdcard
         mkfs.fat $@.boot -C $(FAT32_BLOCKS) -n "boot"
         mcopy -i $@.boot $(BIN_DIR)/boot.bin ::boot.bin
         mcopy -i $@.boot $(STAGING_DIR_IMAGE)/$(DEVICE_NAME)-uEnv.txt ::uEnv.txt
-        mkfs.fat $@.bank1 -C $(FAT32_BLOCKS) -n "bank1"
-        mcopy -i $@.bank1 $(KDIR)/xlnx_zynq-bms-fit-uImage.itb ::uImage0
-        mcopy -i $@.bank1 $(KDIR)/image-$(DEVICE_DTS).dtb ::devicetree0.dtb
+        mcopy -i $@.boot $(KDIR)/xlnx_zynq-bms-fit-uImage.itb ::uImage0
+        mcopy -i $@.boot $(KDIR)/image-$(DEVICE_DTS).dtb ::devicetree0.dtb
         ./gen_zynq_sdcard_dualbank_img.sh $@ \
                 $@.boot \
-                $@.bank1 \
                 $(IMAGE_ROOTFS) \
                 $(IMAGE_ROOTFS) \
                 $(CONFIG_TARGET_KERNEL_PARTSIZE) \

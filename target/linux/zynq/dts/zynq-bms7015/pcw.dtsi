@@ -49,10 +49,10 @@
 	status = "okay";
 };
 &sdhci0 {
-	status = "okay";
-	xlnx,has-cd = <0x1>;
-	xlnx,has-power = <0x0>;
-	xlnx,has-wp = <0x1>;
+        status = "okay";
+        xlnx,has-cd = <0x0>;
+        xlnx,has-power = <0x0>;
+        xlnx,has-wp = <0x0>;
 };
 &spi0 {
 	is-decoded-cs = <0>;

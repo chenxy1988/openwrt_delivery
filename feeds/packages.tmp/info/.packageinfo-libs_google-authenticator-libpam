@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/libs/google-authenticator-libpam/Makefile
+
+Package: google-authenticator-libpam
+Version: 2019-01-03-60207b6c4cebf825863043e963bf67f6a0520076-1
+Depends: +libc +GCC_LIBSSP:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpam +libqrencode
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Google Authenticator PAM module
+Maintainer: Lucian Cristian <lucian.cristian@gmail.com>
+Source: google-authenticator-libpam-2019-01-03.tar.gz
+Type: ipkg
+Description:     Google Authenticator PAM module
+https://github.com/google/google-authenticator-libpam
+Lucian Cristian <lucian.cristian@gmail.com>
+@@
+
+
