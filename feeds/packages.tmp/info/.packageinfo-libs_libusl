@@ -1,0 +1,27 @@
+Source-Makefile: feeds/packages/libs/libusl/Makefile
+
+Package: libusl
+Version: 1
+Depends: +libc +GCC_LIBSSP:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Userspace Libraries for Application
+Maintainer: Xiangyu Chen <xiangyu.chen@aol.com>
+Source: 
+Type: ipkg
+Description:   USL - User Space Library
+  ========================
+  USL is a collection of useful routines for building Unix
+  applications. We find ourselves writing this stuff over and over again
+  each time we write a new application so we collected useful stuff
+  together in one place and gave it a silly name.
+  USL is released under LGPL.
+http://github.com/chenxy1988
+Xiangyu Chen <xiangyu.chen@aol.com>
+@@
+
+

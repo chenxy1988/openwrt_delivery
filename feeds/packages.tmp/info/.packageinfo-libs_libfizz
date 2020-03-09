@@ -1,0 +1,24 @@
+Source-Makefile: feeds/packages/libs/libfizz/Makefile
+
+Package: libfizz
+Version: 2019.05.06.00-1
+Depends: +libc +GCC_LIBSSP:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libfolly +boost +libopenssl +glog +gflags +libevent2 +libdouble-conversion +libsodium
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: C++14 implementation of the TLS-1.3 standard
+Maintainer: 
+Source: libfizz-2019.05.06.00.tar.gz
+License: BSD
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	C++14 implementation of the TLS-1.3 standard.
+	Fizz currently supports TLS 1.3 drafts 28, 26 (both wire-compatible with the final specification), and 23.
+https://github.com/facebookincubator/fizz
+
+@@
+
+

@@ -1,0 +1,10 @@
+#!/bin/sh
+echo "EMMC Flasher"
+echo "Programming flash image "
+dd if=$1 of=/dev/mmcblk0
+sync
+echo "Cleanning all user data "
+dd if=/dev/zero of=/dev/mmcblk0p4 bs=1024 count=128
+echo "Restarting now."
+sync
+reboot

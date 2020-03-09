@@ -475,20 +475,20 @@ static void do_system_upgrade(void)
 
 	if(curbank == 0){
 		system("mkdir -p /tmp/bank1");
-		system("mount /dev/mmcblk0p2 /tmp/bank1");
+		system("mount /dev/mmcblk0p1 /tmp/bank1");
 		system("mv /tmp/image/uimage /tmp/bank1/uimage1");
 		system("mv /tmp/image/devicetree.dtb /tmp/bank1/devicetree1.dtb");
-		system("dd if=/tmp/image/rootfs.bin of=/dev/mmcblk0p4");
+		system("dd if=/tmp/image/rootfs.bin of=/dev/mmcblk0p3");
 		system("sync");
 		system("umount /tmp/bank1");
 		set_current_bank(curbank+1);
 	}else{
 		curbank = 1;
 		system("mkdir -p /tmp/bank1");
-		system("mount /dev/mmcblk0p2 /tmp/bank1");
+		system("mount /dev/mmcblk0p1 /tmp/bank1");
 		system("mv /tmp/image/uimage /tmp/bank1/uimage0");
 		system("mv /tmp/image/devicetree.dtb /tmp/bank1/devicetree0.dtb");
-		system("dd if=/tmp/image/rootfs.bin of=/dev/mmcblk0p3");
+		system("dd if=/tmp/image/rootfs.bin of=/dev/mmcblk0p2");
 		system("umount /tmp/bank1");
 		set_current_bank(curbank-1);
 		system("sync");

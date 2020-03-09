@@ -1,0 +1,22 @@
+Source-Makefile: feeds/packages/net/tac_plus/Makefile
+
+Package: tac_plus
+Version: 4.0.4.28-1
+Depends: +libc +GCC_LIBSSP:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: TACACS+ daemon
+Maintainer: 
+Source: tac_plus-4.0.4.28-2019.02.11-259251e6f1c2d5c98081a43c6f66d9eb2989cfd8.tar.gz
+Type: ipkg
+Description: TACACS+ is a protocol (not TACACS or XTACACS) for authentication,
+authorization and accounting (AAA) services for routers and network devices.
+https://github.com/facebook/tac_plus/
+
+@@
+
+
