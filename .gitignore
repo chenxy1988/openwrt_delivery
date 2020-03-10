@@ -11,6 +11,7 @@
 /tmp
 /logs
 /feeds.conf
+/feeds
 /files
 /overlay
 /package/feeds
