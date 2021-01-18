@@ -4,3 +4,5 @@ config interface 'eth0'
 config interface 'sfp0'
 	option macaddr '00:ff:01:55:11:22'
 
+config interface 'brlan'
+	option macaddr '00:ff:01:55:11:0a'
