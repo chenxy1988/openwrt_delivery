@@ -12,6 +12,11 @@ start() {
 	ifconfig sfp0 down
 	ifconfig sfp0 hw ether `uci get macaddr.sfp0.macaddr`
 	ifconfig sfp0 up
+
+	echo "Update br-lan MAC address"
+	ifconfig br-lan down
+	ifconfig br-lan hw ether `uci get macaddr.brlan.macaddr`
+	ifconfig br-lan up
 }
 
 stop() {
