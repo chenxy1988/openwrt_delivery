@@ -14,9 +14,11 @@ start() {
 	ifconfig sfp0 up
 
 	echo "Update br-lan MAC address"
-	ifconfig br-lan down
-	ifconfig br-lan hw ether `uci get macaddr.brlan.macaddr`
-	ifconfig br-lan up
+	BRLAN=`uci get macaddr.brlan.macaddr`
+	uci set network.lan.macaddr='$BRLAN'
+	uci commit
+	/etc/init.d/network reload
+
 }
 
 stop() {
