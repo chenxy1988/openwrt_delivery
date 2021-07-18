@@ -200,8 +200,11 @@
 		};
 
 		uart0: serial@e0000000 {
-			compatible = "xlnx,xuartps", "cdns,uart-r1p8";
+			compatible = "xlnx,uartps", "cdns,uart-r1p18";
 			status = "disabled";
+			pin_rx = <937>;
+			pin_tx = <938>;
+			channel-reg = <1>;
 			clocks = <&clkc 23>, <&clkc 40>;
 			clock-names = "uart_clk", "pclk";
 			reg = <0xE0000000 0x1000>;
@@ -214,6 +217,9 @@
 			clocks = <&clkc 24>, <&clkc 41>;
 			clock-names = "uart_clk", "pclk";
 			reg = <0xE0001000 0x1000>;
+			pin_rx = <956>;
+			pin_tx = <957>;
+			channel-reg = <1>;
 			interrupts = <0 50 4>;
 		};
 

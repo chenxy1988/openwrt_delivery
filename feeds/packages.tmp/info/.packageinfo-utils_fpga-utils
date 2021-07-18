@@ -1,0 +1,22 @@
+Source-Makefile: feeds/packages/utils/fpga-utils/Makefile
+
+Package: fpga-utils
+Version: 1
+Depends: +libc +GCC_LIBSSP:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Sync data with FPGA
+Maintainer: Xiangyu Chen <xiangyu.chen@aol.com>
+Source: 
+Type: ipkg
+Description: 	This tool can be used to access physical memory addresses from userspace for FPGA.
+	It can be useful to access hardware for which no device driver exists!
+http://github.com/chenxy1988
+Xiangyu Chen <xiangyu.chen@aol.com>
+@@
+
+
