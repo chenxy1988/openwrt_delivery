@@ -10,12 +10,12 @@
 /staging_dir
 /tmp
 /logs
-/feeds.conf
-/feeds
+#/feeds.conf
+#/feeds
 /files
 /overlay
-/package/feeds
-/package/openwrt-packages
+#/package/feeds
+#/package/openwrt-packages
 key-build*
 *.orig
 *.rej
