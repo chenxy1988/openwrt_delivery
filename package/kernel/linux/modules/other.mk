@@ -685,6 +685,18 @@ endef
 
 $(eval $(call KernelPackage,mtdram))
 
+define KernelPackage/uart-legacy-zynq
+  SUBMENU:=$(OTHER_MENU)
+  TITLE:=Zynq Legacy Uart Dirver
+  KCONFIG:= CONFIG_SERIAL_ZYNQ_PS_UART
+  FILES:= $(LINUX_DIR)/drivers/tty/serial/uart-zynq.ko
+  AUTOLOAD:=$(call AutoLoad,32,uart-zynq,1)
+endef
+
+define KernelPackage/uart-legacy-zynq/description
+endef
+
+$(eval $(call KernelPackage,uart-legacy-zynq))
 
 define KernelPackage/serial-8250
   SUBMENU:=$(OTHER_MENU)
