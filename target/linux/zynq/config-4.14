@@ -1656,6 +1656,7 @@ CONFIG_UNIX98_PTYS=y
 # CONFIG_TRACE_SINK is not set
 CONFIG_DEVMEM=y
 # CONFIG_DEVKMEM is not set
+CONFIG_NULL_TTY=y
 
 #
 # Serial drivers

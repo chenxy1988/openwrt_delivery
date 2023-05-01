@@ -203,7 +203,7 @@
 		};
 
 		serial@e0000000 {
-			compatible = "xlnx,uartps", "cdns,uart-r1p18";
+			compatible = "xlnx,xuartps", "cdns,uart-r1p18";
 			status = "okay";
 			pin_rx = <0x3a9>;
 			pin_tx = <0x3aa>;
