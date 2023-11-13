@@ -1,0 +1,12 @@
+#!/bin/sh /etc/rc.common
+
+START=50
+
+start() {
+	echo "Starting watchdog daemon ......"
+	/sbin/watchdog -t 20 /dev/watchdog
+}
+
+stop() {
+	echo "Watchdog exit"
+}
